@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @care.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @care.model %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @care.year %>
+</p>
+
+<%= link_to 'Edit', edit_care_path(@care) %> |
+<%= link_to 'Back', cares_path %>

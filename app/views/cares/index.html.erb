@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cares</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cares.each do |care| %>
+      <tr>
+        <td><%= care.make %></td>
+        <td><%= care.model %></td>
+        <td><%= care.year %></td>
+        <td><%= link_to 'Show', care %></td>
+        <td><%= link_to 'Edit', edit_care_path(care) %></td>
+        <td><%= link_to 'Destroy', care, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Care', new_care_path %>
